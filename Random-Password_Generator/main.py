@@ -39,14 +39,19 @@ def generator():
         
 def exit():
     print('Bye!')
-                    
+
+
     
- 
-main_var = mainmenu()
-if main_var == 'invalid':
-    print('Please enter a correct value\n\n')
+def executer():
     main_var = mainmenu()
-if main_var == True:
-          print('Generated password: ',generator())
-if main_var == False:
-          exit()
+    if main_var == 'invalid':
+        print('Please enter a correct value\n\n')
+        main_var = mainmenu()
+    if main_var == True:
+              print('Generated password: ',generator(),'\n\n')
+              executer()  
+    if main_var == False:
+              exit()
+
+executer()
+                    
